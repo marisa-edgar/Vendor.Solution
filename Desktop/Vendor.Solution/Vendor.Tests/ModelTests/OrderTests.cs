@@ -23,10 +23,21 @@ namespace Vendor.Tests
     [TestMethod]
     public void GetDescription_ReturnsDescription_String()
     {
-      string description = "Walk the dog.";
+      string description = "new order";
       Order newOrder = new Order(description);
       string result = newOrder.Description;
       Assert.AreEqual(description, result);
+    }
+
+    [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
+      string description = "new order";
+      Order newOrder = new Order(description);
+      string updatedDescription = "order 2";
+      newOrder.Description = updatedDescription;
+      string result = newOrder.Description;
+      Assert.AreEqual(updatedDescription, result);
     }
 
   }
