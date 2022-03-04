@@ -29,16 +29,16 @@ namespace Vendor.Tests
       Assert.AreEqual(description, result);
     }
 
-    [TestMethod]
-    public void SetDescription_SetDescription_String()
-    {
-      string description = "new order";
-      Order newOrder = new Order(description);
-      string updatedDescription = "order 2";
-      newOrder.Description = updatedDescription;
-      string result = newOrder.Description;
-      Assert.AreEqual(updatedDescription, result);
-    }
+    // [TestMethod]
+    // public void SetDescription_SetDescription_String()
+    // {
+    //   string description = "new order";
+    //   Order newOrder = new Order(description);
+    //   string updatedDescription = "order 2";
+    //   newOrder.Description = updatedDescription;
+    //   string result = newOrder.Description;
+    //   Assert.AreEqual(updatedDescription, result);
+    // }
 
   }
 }
