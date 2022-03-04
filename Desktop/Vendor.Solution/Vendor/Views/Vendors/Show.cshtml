@@ -10,7 +10,7 @@
 <ol>
 @foreach (Order order in @Model["items"])
 {
-  <li><a href='/vendor/@Model["vendor"].Id/order/@order.Id'>@orde.Description</a></li>
+  <li><a href='/vendor/@Model["vendor"].Id/order/@order.Id'>@order.Description</a></li>
 }
 </ol>
 

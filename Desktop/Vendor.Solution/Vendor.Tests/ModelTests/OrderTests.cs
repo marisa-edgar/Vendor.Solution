@@ -20,3 +20,5 @@ namespace Vendor.Tests
       Order newOrder = new Order("test");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
+  }
+}
