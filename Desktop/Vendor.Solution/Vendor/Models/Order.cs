@@ -12,6 +12,11 @@ namespace Vendor.Models
       _instances.Add(this); 
     }
 
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
+
     public static List<Order> GetAll()
     {
       return _instances;
