@@ -11,7 +11,7 @@ namespace Vendor.Tests
 
     public void Dispose()
     {
-      Order.ClearAll();
+    
     }
 
     [TestMethod]
