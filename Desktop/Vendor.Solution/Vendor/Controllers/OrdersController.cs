@@ -4,14 +4,27 @@ using System.Collections.Generic;
 
 namespace Vendor.Controllers
 {
-  public class OrderController : Controller
+  public class OrdersController : Controller
   {
 
-    [HttpGet("/vendor/{vendorId}/orders/new")]
-    public ActionResult New(int vendorId)
+    [HttpGet("/orders")]
+    public ActionResult Index()
     {
-      Vendor vendor = Vendor.Find(VendorId);
-      return View(vendor);
+      List<Order> allOrders = Order.GetAll();
+      return View(allOrders);
+    }
+
+    [HttpGet("/orders/new")]
+    public ActionResult New()
+    {
+      return View();
+    }
+
+    [HttpPost("/orders")]
+    public ActionResult Create(string description)
+    {
+      Order myOrder = new Order(description);
+      return RedirectToAction("Index");
     }
 
     [HttpPost("/orders/delete")]
@@ -21,15 +34,11 @@ namespace Vendor.Controllers
       return View();
     }
 
-    [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
-    public ActionResult Show(int vendorId, int orderId)
+    [HttpGet("/orders/{id}")]
+    public ActionResult Show(int id)
     {
-      Order order = Order.Find(orderId);
-      Vendor vendor = Vendor.Find(vendorId);
-      Dictionary<string, object> model = new Dictionary<string, object>();
-      model.Add("order", order);
-      model.Add("vendor", vendor);
-      return View(model);
+      Order foundOrder = Order.Find(id);
+      return View(foundOrder);
     }
   }
 }
