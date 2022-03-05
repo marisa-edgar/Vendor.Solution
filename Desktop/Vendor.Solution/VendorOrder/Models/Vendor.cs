@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Vendor.Models
+namespace VendorOrder.Models
 {
   public class Vendor
   {

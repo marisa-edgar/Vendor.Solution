@@ -1,9 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Vendor.Models;
+using VendorOrder.Models;
 using System.Collections.Generic;
 using System;
 
-namespace Vendor.Tests
+namespace VendorOrder.Tests
 {
   [TestClass]
   public class VendorTests

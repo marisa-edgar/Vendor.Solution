@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Vendor.Models;
+using VendorOrder.Models;
 using System.Collections.Generic;
 
-namespace Vendor.Controllers
+namespace VendorOrder.Controllers
 {
   public class OrdersController : Controller
   {
