@@ -5,9 +5,15 @@ using System;
 
 namespace VendorOrder.Tests
 {
-  [TestClass]
-  public class VendorTests
+
+    [TestClass]
+  public class VendorTests : IDisposable
   {
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
+    
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
