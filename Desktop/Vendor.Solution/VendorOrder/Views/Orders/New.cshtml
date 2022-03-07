@@ -5,8 +5,14 @@
 <h1>Add a new Order to @Model.Name</h1>
 
 <form action="/vendors/@Model.Id/orders" method="post">
+<label for="title">Order Title</label>
+  <input id="title" name="title" type="text">
   <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
   <label for="orderDescription">Order Description</label>
   <input id="orderDescription" name="orderDescription" type="text">
+  <label for="price">Order Price</label>
+  <input id="price" name="price" type="number">
+  <label for="date">Order Date</label>
+  <input id="date" name="date" type="text">
   <button type='submit'>Add Order</button>
 </form>
