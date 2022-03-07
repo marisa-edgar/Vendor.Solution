@@ -81,9 +81,9 @@ namespace VendorOrder.Tests
       string name = "test vendor";
       string description = "test vendor";
       Vendor newVendor = new Vendor(name, description);
-      Vendor nextVendor = new Vendor("test", "test");
-      string nameResult = nextVendor.Name;
-      string descriptionResult = nextVendor.Description;
+      Vendor nextVendor = new Vendor("test vendor", "test vendor");
+      string nameResult = newVendor.Name;
+      string descriptionResult = newVendor.Description;
       Assert.AreEqual(name, nameResult);
       Assert.AreEqual(description, descriptionResult);
 
