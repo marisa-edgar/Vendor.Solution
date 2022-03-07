@@ -63,16 +63,16 @@ namespace VendorOrder.Tests
     [TestMethod]
     public void GetProperties_ReturnsProperties_String()
     {
-      string title = "title";
-      string description = "order";
-      int price = 10;
-      string date = "01/02/01";
+      string title = "test title";
+      string description = "new order";
+      int price = 1;
+      string date = "01/01/01";
       Order newOrder = new Order(title, description, price, date);
       Order nextOrder = new Order("test title", "new order", 1, "01/01/01");
-      string titleResult = nextOrder.Title;
-      string descriptionResult = nextOrder.Description;
-      int priceResult = nextOrder.Price;
-      string dateResult = nextOrder.Date;
+      string titleResult = newOrder.Title;
+      string descriptionResult = newOrder.Description;
+      int priceResult = newOrder.Price;
+      string dateResult = newOrder.Date;
       Assert.AreEqual(title, titleResult);
       Assert.AreEqual(description, descriptionResult);
       Assert.AreEqual(price, priceResult);
