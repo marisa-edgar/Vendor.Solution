@@ -74,5 +74,19 @@ namespace VendorOrder.Tests
       List<Order> result = newVendor.Orders;
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void Getdescription_ReturnsDescripton_String()
+    {
+      string name = "test vendor";
+      string description = "test vendor";
+      Vendor newVendor = new Vendor(name, description);
+      Vendor nextVendor = new Vendor("test", "test");
+      string nameResult = nextVendor.Name;
+      string descriptionResult = nextVendor.Description;
+      Assert.AreEqual(name, nameResult);
+      Assert.AreEqual(description, descriptionResult);
+
+    }
   }
 }
